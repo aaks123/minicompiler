@@ -1,0 +1,1749 @@
+PLY: PARSE DEBUG START
+
+State  : 0
+Stack  : . LexToken(NAME,'a',1,0)
+Action : Reduce rule [single_stmt -> <empty>] with [] and goto state 3
+Result : <list @ 0x10af77050> ([])
+
+State  : 2
+Stack  : single_stmt . LexToken(NAME,'a',1,0)
+Action : Shift and goto state 4
+
+State  : 4
+Stack  : single_stmt NAME . LexToken(EQUAL,'=',1,2)
+Action : Reduce rule [atom -> NAME] with ['a'] and goto state 91
+Result : <dict @ 0x10af94280> ({'type': 'REFERENCE_ERROR', 'name': 'a'})
+
+State  : 37
+Stack  : single_stmt atom . LexToken(EQUAL,'=',1,2)
+Action : Reduce rule [power -> atom] with [<dict @ 0x10af94280>] and goto state 89
+Result : <dict @ 0x10af94280> ({'type': 'REFERENCE_ERROR', 'name': 'a'})
+
+State  : 16
+Stack  : single_stmt power . LexToken(EQUAL,'=',1,2)
+Action : Reduce rule [factor -> power] with [<dict @ 0x10af94280>] and goto state 86
+Result : <dict @ 0x10af94280> ({'type': 'REFERENCE_ERROR', 'name': 'a'})
+
+State  : 27
+Stack  : single_stmt factor . LexToken(EQUAL,'=',1,2)
+Action : Reduce rule [term -> factor] with [<dict @ 0x10af94280>] and goto state 82
+Result : <dict @ 0x10af94280> ({'type': 'REFERENCE_ERROR', 'name': 'a'})
+
+State  : 43
+Stack  : single_stmt term . LexToken(EQUAL,'=',1,2)
+Action : Reduce rule [arith_expr -> term] with [<dict @ 0x10af94280>] and goto state 79
+Result : <dict @ 0x10af94280> ({'type': 'REFERENCE_ERROR', 'name': 'a'})
+
+State  : 45
+Stack  : single_stmt arith_expr . LexToken(EQUAL,'=',1,2)
+Action : Reduce rule [shift_expr -> arith_expr] with [<dict @ 0x10af94280>] and goto state 76
+Result : <dict @ 0x10af94280> ({'type': 'REFERENCE_ERROR', 'name': 'a'})
+
+State  : 19
+Stack  : single_stmt shift_expr . LexToken(EQUAL,'=',1,2)
+Action : Reduce rule [and_expr -> shift_expr] with [<dict @ 0x10af94280>] and goto state 74
+Result : <dict @ 0x10af94280> ({'type': 'REFERENCE_ERROR', 'name': 'a'})
+
+State  : 25
+Stack  : single_stmt and_expr . LexToken(EQUAL,'=',1,2)
+Action : Reduce rule [xor_expr -> and_expr] with [<dict @ 0x10af94280>] and goto state 72
+Result : <dict @ 0x10af94280> ({'type': 'REFERENCE_ERROR', 'name': 'a'})
+
+State  : 15
+Stack  : single_stmt xor_expr . LexToken(EQUAL,'=',1,2)
+Action : Reduce rule [expr -> xor_expr] with [<dict @ 0x10af94280>] and goto state 70
+Result : <dict @ 0x10af94280> ({'type': 'REFERENCE_ERROR', 'name': 'a'})
+
+State  : 46
+Stack  : single_stmt expr . LexToken(EQUAL,'=',1,2)
+Action : Reduce rule [comparison -> expr] with [<dict @ 0x10af94280>] and goto state 62
+Result : <dict @ 0x10af94280> ({'type': 'REFERENCE_ERROR', 'name': 'a'})
+
+State  : 42
+Stack  : single_stmt comparison . LexToken(EQUAL,'=',1,2)
+Action : Reduce rule [not_test -> comparison] with [<dict @ 0x10af94280>] and goto state 61
+Result : <dict @ 0x10af94280> ({'type': 'REFERENCE_ERROR', 'name': 'a'})
+
+State  : 9
+Stack  : single_stmt not_test . LexToken(EQUAL,'=',1,2)
+Action : Reduce rule [and_test -> not_test] with [<dict @ 0x10af94280>] and goto state 58
+Result : <dict @ 0x10af94280> ({'type': 'REFERENCE_ERROR', 'name': 'a'})
+
+State  : 35
+Stack  : single_stmt and_test . LexToken(EQUAL,'=',1,2)
+Action : Reduce rule [or_test -> and_test] with [<dict @ 0x10af94280>] and goto state 56
+Result : <dict @ 0x10af94280> ({'type': 'REFERENCE_ERROR', 'name': 'a'})
+
+State  : 47
+Stack  : single_stmt or_test . LexToken(EQUAL,'=',1,2)
+Action : Reduce rule [test_expr -> or_test] with [<dict @ 0x10af94280>] and goto state 55
+Result : <dict @ 0x10af94280> ({'type': 'REFERENCE_ERROR', 'name': 'a'})
+
+State  : 23
+Stack  : single_stmt test_expr . LexToken(EQUAL,'=',1,2)
+Action : Reduce rule [test -> test_expr] with [<dict @ 0x10af94280>] and goto state 54
+Result : <dict @ 0x10af94280> ({'type': 'REFERENCE_ERROR', 'name': 'a', ...)
+
+State  : 22
+Stack  : single_stmt test . LexToken(EQUAL,'=',1,2)
+Action : Shift and goto state 71
+
+State  : 71
+Stack  : single_stmt test EQUAL . LexToken(NUMBER,10,1,4)
+Action : Shift and goto state 53
+
+State  : 53
+Stack  : single_stmt test EQUAL NUMBER . LexToken(NEWLINE,'\n',1,6)
+Action : Reduce rule [atom -> NUMBER] with [10] and goto state 92
+Result : <dict @ 0x10af944b0> ({'place': 'var2', 'type': 'NUMBER'})
+
+State  : 37
+Stack  : single_stmt test EQUAL atom . LexToken(NEWLINE,'\n',1,6)
+Action : Reduce rule [power -> atom] with [<dict @ 0x10af944b0>] and goto state 89
+Result : <dict @ 0x10af944b0> ({'place': 'var2', 'type': 'NUMBER'})
+
+State  : 16
+Stack  : single_stmt test EQUAL power . LexToken(NEWLINE,'\n',1,6)
+Action : Reduce rule [factor -> power] with [<dict @ 0x10af944b0>] and goto state 86
+Result : <dict @ 0x10af944b0> ({'place': 'var2', 'type': 'NUMBER'})
+
+State  : 27
+Stack  : single_stmt test EQUAL factor . LexToken(NEWLINE,'\n',1,6)
+Action : Reduce rule [term -> factor] with [<dict @ 0x10af944b0>] and goto state 82
+Result : <dict @ 0x10af944b0> ({'place': 'var2', 'type': 'NUMBER'})
+
+State  : 43
+Stack  : single_stmt test EQUAL term . LexToken(NEWLINE,'\n',1,6)
+Action : Reduce rule [arith_expr -> term] with [<dict @ 0x10af944b0>] and goto state 79
+Result : <dict @ 0x10af944b0> ({'place': 'var2', 'type': 'NUMBER'})
+
+State  : 45
+Stack  : single_stmt test EQUAL arith_expr . LexToken(NEWLINE,'\n',1,6)
+Action : Reduce rule [shift_expr -> arith_expr] with [<dict @ 0x10af944b0>] and goto state 76
+Result : <dict @ 0x10af944b0> ({'place': 'var2', 'type': 'NUMBER'})
+
+State  : 19
+Stack  : single_stmt test EQUAL shift_expr . LexToken(NEWLINE,'\n',1,6)
+Action : Reduce rule [and_expr -> shift_expr] with [<dict @ 0x10af944b0>] and goto state 74
+Result : <dict @ 0x10af944b0> ({'place': 'var2', 'type': 'NUMBER'})
+
+State  : 25
+Stack  : single_stmt test EQUAL and_expr . LexToken(NEWLINE,'\n',1,6)
+Action : Reduce rule [xor_expr -> and_expr] with [<dict @ 0x10af944b0>] and goto state 72
+Result : <dict @ 0x10af944b0> ({'place': 'var2', 'type': 'NUMBER'})
+
+State  : 15
+Stack  : single_stmt test EQUAL xor_expr . LexToken(NEWLINE,'\n',1,6)
+Action : Reduce rule [expr -> xor_expr] with [<dict @ 0x10af944b0>] and goto state 70
+Result : <dict @ 0x10af944b0> ({'place': 'var2', 'type': 'NUMBER'})
+
+State  : 46
+Stack  : single_stmt test EQUAL expr . LexToken(NEWLINE,'\n',1,6)
+Action : Reduce rule [comparison -> expr] with [<dict @ 0x10af944b0>] and goto state 62
+Result : <dict @ 0x10af944b0> ({'place': 'var2', 'type': 'NUMBER'})
+
+State  : 42
+Stack  : single_stmt test EQUAL comparison . LexToken(NEWLINE,'\n',1,6)
+Action : Reduce rule [not_test -> comparison] with [<dict @ 0x10af944b0>] and goto state 61
+Result : <dict @ 0x10af944b0> ({'place': 'var2', 'type': 'NUMBER'})
+
+State  : 9
+Stack  : single_stmt test EQUAL not_test . LexToken(NEWLINE,'\n',1,6)
+Action : Reduce rule [and_test -> not_test] with [<dict @ 0x10af944b0>] and goto state 58
+Result : <dict @ 0x10af944b0> ({'place': 'var2', 'type': 'NUMBER'})
+
+State  : 35
+Stack  : single_stmt test EQUAL and_test . LexToken(NEWLINE,'\n',1,6)
+Action : Reduce rule [or_test -> and_test] with [<dict @ 0x10af944b0>] and goto state 56
+Result : <dict @ 0x10af944b0> ({'place': 'var2', 'type': 'NUMBER'})
+
+State  : 47
+Stack  : single_stmt test EQUAL or_test . LexToken(NEWLINE,'\n',1,6)
+Action : Reduce rule [test_expr -> or_test] with [<dict @ 0x10af944b0>] and goto state 55
+Result : <dict @ 0x10af944b0> ({'place': 'var2', 'type': 'NUMBER'})
+
+State  : 23
+Stack  : single_stmt test EQUAL test_expr . LexToken(NEWLINE,'\n',1,6)
+Action : Reduce rule [test -> test_expr] with [<dict @ 0x10af944b0>] and goto state 54
+Result : <dict @ 0x10af944b0> ({'place': 'var2', 'type': 'NUMBER', 'ref ...)
+
+State  : 114
+Stack  : single_stmt test EQUAL test . LexToken(NEWLINE,'\n',1,6)
+Action : Reduce rule [expr_stmt -> test EQUAL test] with [<dict @ 0x10af94280>,'=',<dict @ 0x10af944b0>] and goto state 27
+Result : <dict @ 0x10af946e0> ({'nextlist': []})
+
+State  : 40
+Stack  : single_stmt expr_stmt . LexToken(NEWLINE,'\n',1,6)
+Action : Reduce rule [Marker -> <empty>] with [] and goto state 46
+Result : <dict @ 0x10af94910> ({'quad': 1})
+
+State  : 89
+Stack  : single_stmt expr_stmt Marker . LexToken(NEWLINE,'\n',1,6)
+Action : Reduce rule [small_stmt -> expr_stmt Marker] with [<dict @ 0x10af946e0>,{'quad': 1}] and goto state 25
+Result : <dict @ 0x10af946e0> ({'nextlist': []})
+
+State  : 5
+Stack  : single_stmt small_stmt . LexToken(NEWLINE,'\n',1,6)
+Action : Reduce rule [small_stmts -> small_stmt] with [<dict @ 0x10af946e0>] and goto state 23
+Result : <dict @ 0x10af946e0> ({'nextlist': []})
+
+State  : 52
+Stack  : single_stmt small_stmts . LexToken(NEWLINE,'\n',1,6)
+Action : Shift and goto state 104
+
+State  : 104
+Stack  : single_stmt small_stmts NEWLINE . LexToken(NAME,'b',2,7)
+Action : Reduce rule [simple_stmt -> small_stmts NEWLINE] with [<dict @ 0x10af946e0>,'\n'] and goto state 22
+Result : <dict @ 0x10af946e0> ({'nextlist': []})
+
+State  : 30
+Stack  : single_stmt simple_stmt . LexToken(NAME,'b',2,7)
+Action : Reduce rule [stmt -> simple_stmt] with [<dict @ 0x10af946e0>] and goto state 20
+Result : <dict @ 0x10af946e0> ({'nextlist': []})
+
+State  : 32
+Stack  : single_stmt stmt . LexToken(NAME,'b',2,7)
+Action : Reduce rule [single_stmt -> single_stmt stmt] with [[],<dict @ 0x10af946e0>] and goto state 4
+Result : <list @ 0x10ae86878> ([{'nextlist': []}])
+
+State  : 2
+Stack  : single_stmt . LexToken(NAME,'b',2,7)
+Action : Shift and goto state 4
+
+State  : 4
+Stack  : single_stmt NAME . LexToken(EQUAL,'=',2,9)
+Action : Reduce rule [atom -> NAME] with ['b'] and goto state 91
+Result : <dict @ 0x10af94a28> ({'type': 'REFERENCE_ERROR', 'name': 'b'})
+
+State  : 37
+Stack  : single_stmt atom . LexToken(EQUAL,'=',2,9)
+Action : Reduce rule [power -> atom] with [<dict @ 0x10af94a28>] and goto state 89
+Result : <dict @ 0x10af94a28> ({'type': 'REFERENCE_ERROR', 'name': 'b'})
+
+State  : 16
+Stack  : single_stmt power . LexToken(EQUAL,'=',2,9)
+Action : Reduce rule [factor -> power] with [<dict @ 0x10af94a28>] and goto state 86
+Result : <dict @ 0x10af94a28> ({'type': 'REFERENCE_ERROR', 'name': 'b'})
+
+State  : 27
+Stack  : single_stmt factor . LexToken(EQUAL,'=',2,9)
+Action : Reduce rule [term -> factor] with [<dict @ 0x10af94a28>] and goto state 82
+Result : <dict @ 0x10af94a28> ({'type': 'REFERENCE_ERROR', 'name': 'b'})
+
+State  : 43
+Stack  : single_stmt term . LexToken(EQUAL,'=',2,9)
+Action : Reduce rule [arith_expr -> term] with [<dict @ 0x10af94a28>] and goto state 79
+Result : <dict @ 0x10af94a28> ({'type': 'REFERENCE_ERROR', 'name': 'b'})
+
+State  : 45
+Stack  : single_stmt arith_expr . LexToken(EQUAL,'=',2,9)
+Action : Reduce rule [shift_expr -> arith_expr] with [<dict @ 0x10af94a28>] and goto state 76
+Result : <dict @ 0x10af94a28> ({'type': 'REFERENCE_ERROR', 'name': 'b'})
+
+State  : 19
+Stack  : single_stmt shift_expr . LexToken(EQUAL,'=',2,9)
+Action : Reduce rule [and_expr -> shift_expr] with [<dict @ 0x10af94a28>] and goto state 74
+Result : <dict @ 0x10af94a28> ({'type': 'REFERENCE_ERROR', 'name': 'b'})
+
+State  : 25
+Stack  : single_stmt and_expr . LexToken(EQUAL,'=',2,9)
+Action : Reduce rule [xor_expr -> and_expr] with [<dict @ 0x10af94a28>] and goto state 72
+Result : <dict @ 0x10af94a28> ({'type': 'REFERENCE_ERROR', 'name': 'b'})
+
+State  : 15
+Stack  : single_stmt xor_expr . LexToken(EQUAL,'=',2,9)
+Action : Reduce rule [expr -> xor_expr] with [<dict @ 0x10af94a28>] and goto state 70
+Result : <dict @ 0x10af94a28> ({'type': 'REFERENCE_ERROR', 'name': 'b'})
+
+State  : 46
+Stack  : single_stmt expr . LexToken(EQUAL,'=',2,9)
+Action : Reduce rule [comparison -> expr] with [<dict @ 0x10af94a28>] and goto state 62
+Result : <dict @ 0x10af94a28> ({'type': 'REFERENCE_ERROR', 'name': 'b'})
+
+State  : 42
+Stack  : single_stmt comparison . LexToken(EQUAL,'=',2,9)
+Action : Reduce rule [not_test -> comparison] with [<dict @ 0x10af94a28>] and goto state 61
+Result : <dict @ 0x10af94a28> ({'type': 'REFERENCE_ERROR', 'name': 'b'})
+
+State  : 9
+Stack  : single_stmt not_test . LexToken(EQUAL,'=',2,9)
+Action : Reduce rule [and_test -> not_test] with [<dict @ 0x10af94a28>] and goto state 58
+Result : <dict @ 0x10af94a28> ({'type': 'REFERENCE_ERROR', 'name': 'b'})
+
+State  : 35
+Stack  : single_stmt and_test . LexToken(EQUAL,'=',2,9)
+Action : Reduce rule [or_test -> and_test] with [<dict @ 0x10af94a28>] and goto state 56
+Result : <dict @ 0x10af94a28> ({'type': 'REFERENCE_ERROR', 'name': 'b'})
+
+State  : 47
+Stack  : single_stmt or_test . LexToken(EQUAL,'=',2,9)
+Action : Reduce rule [test_expr -> or_test] with [<dict @ 0x10af94a28>] and goto state 55
+Result : <dict @ 0x10af94a28> ({'type': 'REFERENCE_ERROR', 'name': 'b'})
+
+State  : 23
+Stack  : single_stmt test_expr . LexToken(EQUAL,'=',2,9)
+Action : Reduce rule [test -> test_expr] with [<dict @ 0x10af94a28>] and goto state 54
+Result : <dict @ 0x10af94a28> ({'type': 'REFERENCE_ERROR', 'name': 'b', ...)
+
+State  : 22
+Stack  : single_stmt test . LexToken(EQUAL,'=',2,9)
+Action : Shift and goto state 71
+
+State  : 71
+Stack  : single_stmt test EQUAL . LexToken(NUMBER,20,2,11)
+Action : Shift and goto state 53
+
+State  : 53
+Stack  : single_stmt test EQUAL NUMBER . LexToken(NEWLINE,'\n',2,13)
+Action : Reduce rule [atom -> NUMBER] with [20] and goto state 92
+Result : <dict @ 0x10af94b40> ({'place': 'var4', 'type': 'NUMBER'})
+
+State  : 37
+Stack  : single_stmt test EQUAL atom . LexToken(NEWLINE,'\n',2,13)
+Action : Reduce rule [power -> atom] with [<dict @ 0x10af94b40>] and goto state 89
+Result : <dict @ 0x10af94b40> ({'place': 'var4', 'type': 'NUMBER'})
+
+State  : 16
+Stack  : single_stmt test EQUAL power . LexToken(NEWLINE,'\n',2,13)
+Action : Reduce rule [factor -> power] with [<dict @ 0x10af94b40>] and goto state 86
+Result : <dict @ 0x10af94b40> ({'place': 'var4', 'type': 'NUMBER'})
+
+State  : 27
+Stack  : single_stmt test EQUAL factor . LexToken(NEWLINE,'\n',2,13)
+Action : Reduce rule [term -> factor] with [<dict @ 0x10af94b40>] and goto state 82
+Result : <dict @ 0x10af94b40> ({'place': 'var4', 'type': 'NUMBER'})
+
+State  : 43
+Stack  : single_stmt test EQUAL term . LexToken(NEWLINE,'\n',2,13)
+Action : Reduce rule [arith_expr -> term] with [<dict @ 0x10af94b40>] and goto state 79
+Result : <dict @ 0x10af94b40> ({'place': 'var4', 'type': 'NUMBER'})
+
+State  : 45
+Stack  : single_stmt test EQUAL arith_expr . LexToken(NEWLINE,'\n',2,13)
+Action : Reduce rule [shift_expr -> arith_expr] with [<dict @ 0x10af94b40>] and goto state 76
+Result : <dict @ 0x10af94b40> ({'place': 'var4', 'type': 'NUMBER'})
+
+State  : 19
+Stack  : single_stmt test EQUAL shift_expr . LexToken(NEWLINE,'\n',2,13)
+Action : Reduce rule [and_expr -> shift_expr] with [<dict @ 0x10af94b40>] and goto state 74
+Result : <dict @ 0x10af94b40> ({'place': 'var4', 'type': 'NUMBER'})
+
+State  : 25
+Stack  : single_stmt test EQUAL and_expr . LexToken(NEWLINE,'\n',2,13)
+Action : Reduce rule [xor_expr -> and_expr] with [<dict @ 0x10af94b40>] and goto state 72
+Result : <dict @ 0x10af94b40> ({'place': 'var4', 'type': 'NUMBER'})
+
+State  : 15
+Stack  : single_stmt test EQUAL xor_expr . LexToken(NEWLINE,'\n',2,13)
+Action : Reduce rule [expr -> xor_expr] with [<dict @ 0x10af94b40>] and goto state 70
+Result : <dict @ 0x10af94b40> ({'place': 'var4', 'type': 'NUMBER'})
+
+State  : 46
+Stack  : single_stmt test EQUAL expr . LexToken(NEWLINE,'\n',2,13)
+Action : Reduce rule [comparison -> expr] with [<dict @ 0x10af94b40>] and goto state 62
+Result : <dict @ 0x10af94b40> ({'place': 'var4', 'type': 'NUMBER'})
+
+State  : 42
+Stack  : single_stmt test EQUAL comparison . LexToken(NEWLINE,'\n',2,13)
+Action : Reduce rule [not_test -> comparison] with [<dict @ 0x10af94b40>] and goto state 61
+Result : <dict @ 0x10af94b40> ({'place': 'var4', 'type': 'NUMBER'})
+
+State  : 9
+Stack  : single_stmt test EQUAL not_test . LexToken(NEWLINE,'\n',2,13)
+Action : Reduce rule [and_test -> not_test] with [<dict @ 0x10af94b40>] and goto state 58
+Result : <dict @ 0x10af94b40> ({'place': 'var4', 'type': 'NUMBER'})
+
+State  : 35
+Stack  : single_stmt test EQUAL and_test . LexToken(NEWLINE,'\n',2,13)
+Action : Reduce rule [or_test -> and_test] with [<dict @ 0x10af94b40>] and goto state 56
+Result : <dict @ 0x10af94b40> ({'place': 'var4', 'type': 'NUMBER'})
+
+State  : 47
+Stack  : single_stmt test EQUAL or_test . LexToken(NEWLINE,'\n',2,13)
+Action : Reduce rule [test_expr -> or_test] with [<dict @ 0x10af94b40>] and goto state 55
+Result : <dict @ 0x10af94b40> ({'place': 'var4', 'type': 'NUMBER'})
+
+State  : 23
+Stack  : single_stmt test EQUAL test_expr . LexToken(NEWLINE,'\n',2,13)
+Action : Reduce rule [test -> test_expr] with [<dict @ 0x10af94b40>] and goto state 54
+Result : <dict @ 0x10af94b40> ({'place': 'var4', 'type': 'NUMBER', 'ref ...)
+
+State  : 114
+Stack  : single_stmt test EQUAL test . LexToken(NEWLINE,'\n',2,13)
+Action : Reduce rule [expr_stmt -> test EQUAL test] with [<dict @ 0x10af94a28>,'=',<dict @ 0x10af94b40>] and goto state 27
+Result : <dict @ 0x10af94d70> ({'nextlist': []})
+
+State  : 40
+Stack  : single_stmt expr_stmt . LexToken(NEWLINE,'\n',2,13)
+Action : Reduce rule [Marker -> <empty>] with [] and goto state 46
+Result : <dict @ 0x10af97050> ({'quad': 2})
+
+State  : 89
+Stack  : single_stmt expr_stmt Marker . LexToken(NEWLINE,'\n',2,13)
+Action : Reduce rule [small_stmt -> expr_stmt Marker] with [<dict @ 0x10af94d70>,{'quad': 2}] and goto state 25
+Result : <dict @ 0x10af94d70> ({'nextlist': []})
+
+State  : 5
+Stack  : single_stmt small_stmt . LexToken(NEWLINE,'\n',2,13)
+Action : Reduce rule [small_stmts -> small_stmt] with [<dict @ 0x10af94d70>] and goto state 23
+Result : <dict @ 0x10af94d70> ({'nextlist': []})
+
+State  : 52
+Stack  : single_stmt small_stmts . LexToken(NEWLINE,'\n',2,13)
+Action : Shift and goto state 104
+
+State  : 104
+Stack  : single_stmt small_stmts NEWLINE . LexToken(PRINT,'print',3,14)
+Action : Reduce rule [simple_stmt -> small_stmts NEWLINE] with [<dict @ 0x10af94d70>,'\n'] and goto state 22
+Result : <dict @ 0x10af94d70> ({'nextlist': []})
+
+State  : 30
+Stack  : single_stmt simple_stmt . LexToken(PRINT,'print',3,14)
+Action : Reduce rule [stmt -> simple_stmt] with [<dict @ 0x10af94d70>] and goto state 20
+Result : <dict @ 0x10af94d70> ({'nextlist': []})
+
+State  : 32
+Stack  : single_stmt stmt . LexToken(PRINT,'print',3,14)
+Action : Reduce rule [single_stmt -> single_stmt stmt] with [<list @ 0x10ae86878>,<dict @ 0x10af94d70>] and goto state 4
+Result : <list @ 0x10ae93dd0> ([{'nextlist': []}, {'nextlist': []}])
+
+State  : 2
+Stack  : single_stmt . LexToken(PRINT,'print',3,14)
+Action : Shift and goto state 10
+
+State  : 10
+Stack  : single_stmt PRINT . LexToken(NAME,'a',3,20)
+Action : Shift and goto state 61
+
+State  : 61
+Stack  : single_stmt PRINT NAME . LexToken(NEWLINE,'\n',3,21)
+Action : Reduce rule [atom -> NAME] with ['a'] and goto state 91
+Result : <dict @ 0x10af97168> ({'place': 'var2', 'type': 'NUMBER', 'nam ...)
+
+State  : 37
+Stack  : single_stmt PRINT atom . LexToken(NEWLINE,'\n',3,21)
+Action : Reduce rule [power -> atom] with [<dict @ 0x10af97168>] and goto state 89
+Result : <dict @ 0x10af97168> ({'place': 'var2', 'type': 'NUMBER', 'nam ...)
+
+State  : 16
+Stack  : single_stmt PRINT power . LexToken(NEWLINE,'\n',3,21)
+Action : Reduce rule [factor -> power] with [<dict @ 0x10af97168>] and goto state 86
+Result : <dict @ 0x10af97168> ({'place': 'var2', 'type': 'NUMBER', 'nam ...)
+
+State  : 27
+Stack  : single_stmt PRINT factor . LexToken(NEWLINE,'\n',3,21)
+Action : Reduce rule [term -> factor] with [<dict @ 0x10af97168>] and goto state 82
+Result : <dict @ 0x10af97168> ({'place': 'var2', 'type': 'NUMBER', 'nam ...)
+
+State  : 43
+Stack  : single_stmt PRINT term . LexToken(NEWLINE,'\n',3,21)
+Action : Reduce rule [arith_expr -> term] with [<dict @ 0x10af97168>] and goto state 79
+Result : <dict @ 0x10af97168> ({'place': 'var2', 'type': 'NUMBER', 'nam ...)
+
+State  : 45
+Stack  : single_stmt PRINT arith_expr . LexToken(NEWLINE,'\n',3,21)
+Action : Reduce rule [shift_expr -> arith_expr] with [<dict @ 0x10af97168>] and goto state 76
+Result : <dict @ 0x10af97168> ({'place': 'var2', 'type': 'NUMBER', 'nam ...)
+
+State  : 19
+Stack  : single_stmt PRINT shift_expr . LexToken(NEWLINE,'\n',3,21)
+Action : Reduce rule [and_expr -> shift_expr] with [<dict @ 0x10af97168>] and goto state 74
+Result : <dict @ 0x10af97168> ({'place': 'var2', 'type': 'NUMBER', 'nam ...)
+
+State  : 25
+Stack  : single_stmt PRINT and_expr . LexToken(NEWLINE,'\n',3,21)
+Action : Reduce rule [xor_expr -> and_expr] with [<dict @ 0x10af97168>] and goto state 72
+Result : <dict @ 0x10af97168> ({'place': 'var2', 'type': 'NUMBER', 'nam ...)
+
+State  : 15
+Stack  : single_stmt PRINT xor_expr . LexToken(NEWLINE,'\n',3,21)
+Action : Reduce rule [expr -> xor_expr] with [<dict @ 0x10af97168>] and goto state 70
+Result : <dict @ 0x10af97168> ({'place': 'var2', 'type': 'NUMBER', 'nam ...)
+
+State  : 46
+Stack  : single_stmt PRINT expr . LexToken(NEWLINE,'\n',3,21)
+Action : Reduce rule [comparison -> expr] with [<dict @ 0x10af97168>] and goto state 62
+Result : <dict @ 0x10af97168> ({'place': 'var2', 'type': 'NUMBER', 'nam ...)
+
+State  : 42
+Stack  : single_stmt PRINT comparison . LexToken(NEWLINE,'\n',3,21)
+Action : Reduce rule [not_test -> comparison] with [<dict @ 0x10af97168>] and goto state 61
+Result : <dict @ 0x10af97168> ({'place': 'var2', 'type': 'NUMBER', 'nam ...)
+
+State  : 9
+Stack  : single_stmt PRINT not_test . LexToken(NEWLINE,'\n',3,21)
+Action : Reduce rule [and_test -> not_test] with [<dict @ 0x10af97168>] and goto state 58
+Result : <dict @ 0x10af97168> ({'place': 'var2', 'type': 'NUMBER', 'nam ...)
+
+State  : 35
+Stack  : single_stmt PRINT and_test . LexToken(NEWLINE,'\n',3,21)
+Action : Reduce rule [or_test -> and_test] with [<dict @ 0x10af97168>] and goto state 56
+Result : <dict @ 0x10af97168> ({'place': 'var2', 'type': 'NUMBER', 'nam ...)
+
+State  : 47
+Stack  : single_stmt PRINT or_test . LexToken(NEWLINE,'\n',3,21)
+Action : Reduce rule [test_expr -> or_test] with [<dict @ 0x10af97168>] and goto state 55
+Result : <dict @ 0x10af97168> ({'place': 'var2', 'type': 'NUMBER', 'nam ...)
+
+State  : 23
+Stack  : single_stmt PRINT test_expr . LexToken(NEWLINE,'\n',3,21)
+Action : Reduce rule [test -> test_expr] with [<dict @ 0x10af97168>] and goto state 54
+Result : <dict @ 0x10af97168> ({'name': 'a', 'reference': None, 'place' ...)
+
+State  : 59
+Stack  : single_stmt PRINT test . LexToken(NEWLINE,'\n',3,21)
+Action : Reduce rule [testlist -> test] with [<dict @ 0x10af97168>] and goto state 104
+Result : <list @ 0x10ae93cf8> ([{'name': 'a', 'reference': None, 'place ...)
+
+State  : 60
+Stack  : single_stmt PRINT testlist . LexToken(NEWLINE,'\n',3,21)
+Action : Reduce rule [print_stmt -> PRINT testlist] with ['print',<list @ 0x10ae93cf8>] and goto state 30
+Result : <dict @ 0x10af97280> ({})
+
+State  : 21
+Stack  : single_stmt print_stmt . LexToken(NEWLINE,'\n',3,21)
+Action : Reduce rule [Marker -> <empty>] with [] and goto state 46
+Result : <dict @ 0x10af97398> ({'quad': 4})
+
+State  : 70
+Stack  : single_stmt print_stmt Marker . LexToken(NEWLINE,'\n',3,21)
+Action : Reduce rule [small_stmt -> print_stmt Marker] with [{},{'quad': 4}] and goto state 26
+Result : <dict @ 0x10af97280> ({})
+
+State  : 5
+Stack  : single_stmt small_stmt . LexToken(NEWLINE,'\n',3,21)
+Action : Reduce rule [small_stmts -> small_stmt] with [{}] and goto state 23
+Result : <dict @ 0x10af97280> ({})
+
+State  : 52
+Stack  : single_stmt small_stmts . LexToken(NEWLINE,'\n',3,21)
+Action : Shift and goto state 104
+
+State  : 104
+Stack  : single_stmt small_stmts NEWLINE . LexToken(PRINT,'print',4,22)
+Action : Reduce rule [simple_stmt -> small_stmts NEWLINE] with [{},'\n'] and goto state 22
+Result : <dict @ 0x10af97280> ({})
+
+State  : 30
+Stack  : single_stmt simple_stmt . LexToken(PRINT,'print',4,22)
+Action : Reduce rule [stmt -> simple_stmt] with [{}] and goto state 20
+Result : <dict @ 0x10af97280> ({})
+
+State  : 32
+Stack  : single_stmt stmt . LexToken(PRINT,'print',4,22)
+Action : Reduce rule [single_stmt -> single_stmt stmt] with [<list @ 0x10ae93dd0>,{}] and goto state 4
+Result : <list @ 0x10af717a0> ([{'nextlist': []}, {'nextlist': []}, {}])
+
+State  : 2
+Stack  : single_stmt . LexToken(PRINT,'print',4,22)
+Action : Shift and goto state 10
+
+State  : 10
+Stack  : single_stmt PRINT . LexToken(NAME,'b',4,28)
+Action : Shift and goto state 61
+
+State  : 61
+Stack  : single_stmt PRINT NAME . LexToken(NEWLINE,'\n',4,29)
+Action : Reduce rule [atom -> NAME] with ['b'] and goto state 91
+Result : <dict @ 0x10af974b0> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 37
+Stack  : single_stmt PRINT atom . LexToken(NEWLINE,'\n',4,29)
+Action : Reduce rule [power -> atom] with [<dict @ 0x10af974b0>] and goto state 89
+Result : <dict @ 0x10af974b0> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 16
+Stack  : single_stmt PRINT power . LexToken(NEWLINE,'\n',4,29)
+Action : Reduce rule [factor -> power] with [<dict @ 0x10af974b0>] and goto state 86
+Result : <dict @ 0x10af974b0> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 27
+Stack  : single_stmt PRINT factor . LexToken(NEWLINE,'\n',4,29)
+Action : Reduce rule [term -> factor] with [<dict @ 0x10af974b0>] and goto state 82
+Result : <dict @ 0x10af974b0> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 43
+Stack  : single_stmt PRINT term . LexToken(NEWLINE,'\n',4,29)
+Action : Reduce rule [arith_expr -> term] with [<dict @ 0x10af974b0>] and goto state 79
+Result : <dict @ 0x10af974b0> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 45
+Stack  : single_stmt PRINT arith_expr . LexToken(NEWLINE,'\n',4,29)
+Action : Reduce rule [shift_expr -> arith_expr] with [<dict @ 0x10af974b0>] and goto state 76
+Result : <dict @ 0x10af974b0> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 19
+Stack  : single_stmt PRINT shift_expr . LexToken(NEWLINE,'\n',4,29)
+Action : Reduce rule [and_expr -> shift_expr] with [<dict @ 0x10af974b0>] and goto state 74
+Result : <dict @ 0x10af974b0> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 25
+Stack  : single_stmt PRINT and_expr . LexToken(NEWLINE,'\n',4,29)
+Action : Reduce rule [xor_expr -> and_expr] with [<dict @ 0x10af974b0>] and goto state 72
+Result : <dict @ 0x10af974b0> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 15
+Stack  : single_stmt PRINT xor_expr . LexToken(NEWLINE,'\n',4,29)
+Action : Reduce rule [expr -> xor_expr] with [<dict @ 0x10af974b0>] and goto state 70
+Result : <dict @ 0x10af974b0> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 46
+Stack  : single_stmt PRINT expr . LexToken(NEWLINE,'\n',4,29)
+Action : Reduce rule [comparison -> expr] with [<dict @ 0x10af974b0>] and goto state 62
+Result : <dict @ 0x10af974b0> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 42
+Stack  : single_stmt PRINT comparison . LexToken(NEWLINE,'\n',4,29)
+Action : Reduce rule [not_test -> comparison] with [<dict @ 0x10af974b0>] and goto state 61
+Result : <dict @ 0x10af974b0> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 9
+Stack  : single_stmt PRINT not_test . LexToken(NEWLINE,'\n',4,29)
+Action : Reduce rule [and_test -> not_test] with [<dict @ 0x10af974b0>] and goto state 58
+Result : <dict @ 0x10af974b0> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 35
+Stack  : single_stmt PRINT and_test . LexToken(NEWLINE,'\n',4,29)
+Action : Reduce rule [or_test -> and_test] with [<dict @ 0x10af974b0>] and goto state 56
+Result : <dict @ 0x10af974b0> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 47
+Stack  : single_stmt PRINT or_test . LexToken(NEWLINE,'\n',4,29)
+Action : Reduce rule [test_expr -> or_test] with [<dict @ 0x10af974b0>] and goto state 55
+Result : <dict @ 0x10af974b0> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 23
+Stack  : single_stmt PRINT test_expr . LexToken(NEWLINE,'\n',4,29)
+Action : Reduce rule [test -> test_expr] with [<dict @ 0x10af974b0>] and goto state 54
+Result : <dict @ 0x10af974b0> ({'name': 'b', 'reference': None, 'place' ...)
+
+State  : 59
+Stack  : single_stmt PRINT test . LexToken(NEWLINE,'\n',4,29)
+Action : Reduce rule [testlist -> test] with [<dict @ 0x10af974b0>] and goto state 104
+Result : <list @ 0x10ae91cb0> ([{'name': 'b', 'reference': None, 'place ...)
+
+State  : 60
+Stack  : single_stmt PRINT testlist . LexToken(NEWLINE,'\n',4,29)
+Action : Reduce rule [print_stmt -> PRINT testlist] with ['print',<list @ 0x10ae91cb0>] and goto state 30
+Result : <dict @ 0x10af975c8> ({})
+
+State  : 21
+Stack  : single_stmt print_stmt . LexToken(NEWLINE,'\n',4,29)
+Action : Reduce rule [Marker -> <empty>] with [] and goto state 46
+Result : <dict @ 0x10af976e0> ({'quad': 6})
+
+State  : 70
+Stack  : single_stmt print_stmt Marker . LexToken(NEWLINE,'\n',4,29)
+Action : Reduce rule [small_stmt -> print_stmt Marker] with [{},{'quad': 6}] and goto state 26
+Result : <dict @ 0x10af975c8> ({})
+
+State  : 5
+Stack  : single_stmt small_stmt . LexToken(NEWLINE,'\n',4,29)
+Action : Reduce rule [small_stmts -> small_stmt] with [{}] and goto state 23
+Result : <dict @ 0x10af975c8> ({})
+
+State  : 52
+Stack  : single_stmt small_stmts . LexToken(NEWLINE,'\n',4,29)
+Action : Shift and goto state 104
+
+State  : 104
+Stack  : single_stmt small_stmts NEWLINE . LexToken(NAME,'c',5,30)
+Action : Reduce rule [simple_stmt -> small_stmts NEWLINE] with [{},'\n'] and goto state 22
+Result : <dict @ 0x10af975c8> ({})
+
+State  : 30
+Stack  : single_stmt simple_stmt . LexToken(NAME,'c',5,30)
+Action : Reduce rule [stmt -> simple_stmt] with [{}] and goto state 20
+Result : <dict @ 0x10af975c8> ({})
+
+State  : 32
+Stack  : single_stmt stmt . LexToken(NAME,'c',5,30)
+Action : Reduce rule [single_stmt -> single_stmt stmt] with [<list @ 0x10af717a0>,{}] and goto state 4
+Result : <list @ 0x10ae8bb00> ([{'nextlist': []}, {'nextlist': []}, {}, ...)
+
+State  : 2
+Stack  : single_stmt . LexToken(NAME,'c',5,30)
+Action : Shift and goto state 4
+
+State  : 4
+Stack  : single_stmt NAME . LexToken(EQUAL,'=',5,32)
+Action : Reduce rule [atom -> NAME] with ['c'] and goto state 91
+Result : <dict @ 0x10af977f8> ({'type': 'REFERENCE_ERROR', 'name': 'c'})
+
+State  : 37
+Stack  : single_stmt atom . LexToken(EQUAL,'=',5,32)
+Action : Reduce rule [power -> atom] with [<dict @ 0x10af977f8>] and goto state 89
+Result : <dict @ 0x10af977f8> ({'type': 'REFERENCE_ERROR', 'name': 'c'})
+
+State  : 16
+Stack  : single_stmt power . LexToken(EQUAL,'=',5,32)
+Action : Reduce rule [factor -> power] with [<dict @ 0x10af977f8>] and goto state 86
+Result : <dict @ 0x10af977f8> ({'type': 'REFERENCE_ERROR', 'name': 'c'})
+
+State  : 27
+Stack  : single_stmt factor . LexToken(EQUAL,'=',5,32)
+Action : Reduce rule [term -> factor] with [<dict @ 0x10af977f8>] and goto state 82
+Result : <dict @ 0x10af977f8> ({'type': 'REFERENCE_ERROR', 'name': 'c'})
+
+State  : 43
+Stack  : single_stmt term . LexToken(EQUAL,'=',5,32)
+Action : Reduce rule [arith_expr -> term] with [<dict @ 0x10af977f8>] and goto state 79
+Result : <dict @ 0x10af977f8> ({'type': 'REFERENCE_ERROR', 'name': 'c'})
+
+State  : 45
+Stack  : single_stmt arith_expr . LexToken(EQUAL,'=',5,32)
+Action : Reduce rule [shift_expr -> arith_expr] with [<dict @ 0x10af977f8>] and goto state 76
+Result : <dict @ 0x10af977f8> ({'type': 'REFERENCE_ERROR', 'name': 'c'})
+
+State  : 19
+Stack  : single_stmt shift_expr . LexToken(EQUAL,'=',5,32)
+Action : Reduce rule [and_expr -> shift_expr] with [<dict @ 0x10af977f8>] and goto state 74
+Result : <dict @ 0x10af977f8> ({'type': 'REFERENCE_ERROR', 'name': 'c'})
+
+State  : 25
+Stack  : single_stmt and_expr . LexToken(EQUAL,'=',5,32)
+Action : Reduce rule [xor_expr -> and_expr] with [<dict @ 0x10af977f8>] and goto state 72
+Result : <dict @ 0x10af977f8> ({'type': 'REFERENCE_ERROR', 'name': 'c'})
+
+State  : 15
+Stack  : single_stmt xor_expr . LexToken(EQUAL,'=',5,32)
+Action : Reduce rule [expr -> xor_expr] with [<dict @ 0x10af977f8>] and goto state 70
+Result : <dict @ 0x10af977f8> ({'type': 'REFERENCE_ERROR', 'name': 'c'})
+
+State  : 46
+Stack  : single_stmt expr . LexToken(EQUAL,'=',5,32)
+Action : Reduce rule [comparison -> expr] with [<dict @ 0x10af977f8>] and goto state 62
+Result : <dict @ 0x10af977f8> ({'type': 'REFERENCE_ERROR', 'name': 'c'})
+
+State  : 42
+Stack  : single_stmt comparison . LexToken(EQUAL,'=',5,32)
+Action : Reduce rule [not_test -> comparison] with [<dict @ 0x10af977f8>] and goto state 61
+Result : <dict @ 0x10af977f8> ({'type': 'REFERENCE_ERROR', 'name': 'c'})
+
+State  : 9
+Stack  : single_stmt not_test . LexToken(EQUAL,'=',5,32)
+Action : Reduce rule [and_test -> not_test] with [<dict @ 0x10af977f8>] and goto state 58
+Result : <dict @ 0x10af977f8> ({'type': 'REFERENCE_ERROR', 'name': 'c'})
+
+State  : 35
+Stack  : single_stmt and_test . LexToken(EQUAL,'=',5,32)
+Action : Reduce rule [or_test -> and_test] with [<dict @ 0x10af977f8>] and goto state 56
+Result : <dict @ 0x10af977f8> ({'type': 'REFERENCE_ERROR', 'name': 'c'})
+
+State  : 47
+Stack  : single_stmt or_test . LexToken(EQUAL,'=',5,32)
+Action : Reduce rule [test_expr -> or_test] with [<dict @ 0x10af977f8>] and goto state 55
+Result : <dict @ 0x10af977f8> ({'type': 'REFERENCE_ERROR', 'name': 'c'})
+
+State  : 23
+Stack  : single_stmt test_expr . LexToken(EQUAL,'=',5,32)
+Action : Reduce rule [test -> test_expr] with [<dict @ 0x10af977f8>] and goto state 54
+Result : <dict @ 0x10af977f8> ({'type': 'REFERENCE_ERROR', 'name': 'c', ...)
+
+State  : 22
+Stack  : single_stmt test . LexToken(EQUAL,'=',5,32)
+Action : Shift and goto state 71
+
+State  : 71
+Stack  : single_stmt test EQUAL . LexToken(NAME,'a',5,34)
+Action : Shift and goto state 4
+
+State  : 4
+Stack  : single_stmt test EQUAL NAME . LexToken(PLUS,'+',5,36)
+Action : Reduce rule [atom -> NAME] with ['a'] and goto state 91
+Result : <dict @ 0x10af97910> ({'place': 'var2', 'type': 'NUMBER', 'nam ...)
+
+State  : 37
+Stack  : single_stmt test EQUAL atom . LexToken(PLUS,'+',5,36)
+Action : Reduce rule [power -> atom] with [<dict @ 0x10af97910>] and goto state 89
+Result : <dict @ 0x10af97910> ({'place': 'var2', 'type': 'NUMBER', 'nam ...)
+
+State  : 16
+Stack  : single_stmt test EQUAL power . LexToken(PLUS,'+',5,36)
+Action : Reduce rule [factor -> power] with [<dict @ 0x10af97910>] and goto state 86
+Result : <dict @ 0x10af97910> ({'place': 'var2', 'type': 'NUMBER', 'nam ...)
+
+State  : 27
+Stack  : single_stmt test EQUAL factor . LexToken(PLUS,'+',5,36)
+Action : Reduce rule [term -> factor] with [<dict @ 0x10af97910>] and goto state 82
+Result : <dict @ 0x10af97910> ({'place': 'var2', 'type': 'NUMBER', 'nam ...)
+
+State  : 43
+Stack  : single_stmt test EQUAL term . LexToken(PLUS,'+',5,36)
+Action : Shift and goto state 91
+
+State  : 91
+Stack  : single_stmt test EQUAL term PLUS . LexToken(NAME,'b',5,38)
+Action : Shift and goto state 61
+
+State  : 61
+Stack  : single_stmt test EQUAL term PLUS NAME . LexToken(NEWLINE,'\n',5,39)
+Action : Reduce rule [atom -> NAME] with ['b'] and goto state 91
+Result : <dict @ 0x10af97a28> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 37
+Stack  : single_stmt test EQUAL term PLUS atom . LexToken(NEWLINE,'\n',5,39)
+Action : Reduce rule [power -> atom] with [<dict @ 0x10af97a28>] and goto state 89
+Result : <dict @ 0x10af97a28> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 16
+Stack  : single_stmt test EQUAL term PLUS power . LexToken(NEWLINE,'\n',5,39)
+Action : Reduce rule [factor -> power] with [<dict @ 0x10af97a28>] and goto state 86
+Result : <dict @ 0x10af97a28> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 27
+Stack  : single_stmt test EQUAL term PLUS factor . LexToken(NEWLINE,'\n',5,39)
+Action : Reduce rule [term -> factor] with [<dict @ 0x10af97a28>] and goto state 82
+Result : <dict @ 0x10af97a28> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 43
+Stack  : single_stmt test EQUAL term PLUS term . LexToken(NEWLINE,'\n',5,39)
+Action : Reduce rule [arith_expr -> term] with [<dict @ 0x10af97a28>] and goto state 79
+Result : <dict @ 0x10af97a28> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 127
+Stack  : single_stmt test EQUAL term PLUS arith_expr . LexToken(NEWLINE,'\n',5,39)
+Action : Reduce rule [arith_expr -> term PLUS arith_expr] with [<dict @ 0x10af97910>,'+',<dict @ 0x10af97a28>] and goto state 80
+Result : <dict @ 0x10af97b40> ({'type': 'NUMBER', 'place': 'var5'})
+
+State  : 45
+Stack  : single_stmt test EQUAL arith_expr . LexToken(NEWLINE,'\n',5,39)
+Action : Reduce rule [shift_expr -> arith_expr] with [<dict @ 0x10af97b40>] and goto state 76
+Result : <dict @ 0x10af97b40> ({'type': 'NUMBER', 'place': 'var5'})
+
+State  : 19
+Stack  : single_stmt test EQUAL shift_expr . LexToken(NEWLINE,'\n',5,39)
+Action : Reduce rule [and_expr -> shift_expr] with [<dict @ 0x10af97b40>] and goto state 74
+Result : <dict @ 0x10af97b40> ({'type': 'NUMBER', 'place': 'var5'})
+
+State  : 25
+Stack  : single_stmt test EQUAL and_expr . LexToken(NEWLINE,'\n',5,39)
+Action : Reduce rule [xor_expr -> and_expr] with [<dict @ 0x10af97b40>] and goto state 72
+Result : <dict @ 0x10af97b40> ({'type': 'NUMBER', 'place': 'var5'})
+
+State  : 15
+Stack  : single_stmt test EQUAL xor_expr . LexToken(NEWLINE,'\n',5,39)
+Action : Reduce rule [expr -> xor_expr] with [<dict @ 0x10af97b40>] and goto state 70
+Result : <dict @ 0x10af97b40> ({'type': 'NUMBER', 'place': 'var5'})
+
+State  : 46
+Stack  : single_stmt test EQUAL expr . LexToken(NEWLINE,'\n',5,39)
+Action : Reduce rule [comparison -> expr] with [<dict @ 0x10af97b40>] and goto state 62
+Result : <dict @ 0x10af97b40> ({'type': 'NUMBER', 'place': 'var5'})
+
+State  : 42
+Stack  : single_stmt test EQUAL comparison . LexToken(NEWLINE,'\n',5,39)
+Action : Reduce rule [not_test -> comparison] with [<dict @ 0x10af97b40>] and goto state 61
+Result : <dict @ 0x10af97b40> ({'type': 'NUMBER', 'place': 'var5'})
+
+State  : 9
+Stack  : single_stmt test EQUAL not_test . LexToken(NEWLINE,'\n',5,39)
+Action : Reduce rule [and_test -> not_test] with [<dict @ 0x10af97b40>] and goto state 58
+Result : <dict @ 0x10af97b40> ({'type': 'NUMBER', 'place': 'var5'})
+
+State  : 35
+Stack  : single_stmt test EQUAL and_test . LexToken(NEWLINE,'\n',5,39)
+Action : Reduce rule [or_test -> and_test] with [<dict @ 0x10af97b40>] and goto state 56
+Result : <dict @ 0x10af97b40> ({'type': 'NUMBER', 'place': 'var5'})
+
+State  : 47
+Stack  : single_stmt test EQUAL or_test . LexToken(NEWLINE,'\n',5,39)
+Action : Reduce rule [test_expr -> or_test] with [<dict @ 0x10af97b40>] and goto state 55
+Result : <dict @ 0x10af97b40> ({'type': 'NUMBER', 'place': 'var5'})
+
+State  : 23
+Stack  : single_stmt test EQUAL test_expr . LexToken(NEWLINE,'\n',5,39)
+Action : Reduce rule [test -> test_expr] with [<dict @ 0x10af97b40>] and goto state 54
+Result : <dict @ 0x10af97b40> ({'type': 'NUMBER', 'place': 'var5', 'ref ...)
+
+State  : 114
+Stack  : single_stmt test EQUAL test . LexToken(NEWLINE,'\n',5,39)
+Action : Reduce rule [expr_stmt -> test EQUAL test] with [<dict @ 0x10af977f8>,'=',<dict @ 0x10af97b40>] and goto state 27
+Result : <dict @ 0x10af97c58> ({'nextlist': []})
+
+State  : 40
+Stack  : single_stmt expr_stmt . LexToken(NEWLINE,'\n',5,39)
+Action : Reduce rule [Marker -> <empty>] with [] and goto state 46
+Result : <dict @ 0x10af97e88> ({'quad': 7})
+
+State  : 89
+Stack  : single_stmt expr_stmt Marker . LexToken(NEWLINE,'\n',5,39)
+Action : Reduce rule [small_stmt -> expr_stmt Marker] with [<dict @ 0x10af97c58>,{'quad': 7}] and goto state 25
+Result : <dict @ 0x10af97c58> ({'nextlist': []})
+
+State  : 5
+Stack  : single_stmt small_stmt . LexToken(NEWLINE,'\n',5,39)
+Action : Reduce rule [small_stmts -> small_stmt] with [<dict @ 0x10af97c58>] and goto state 23
+Result : <dict @ 0x10af97c58> ({'nextlist': []})
+
+State  : 52
+Stack  : single_stmt small_stmts . LexToken(NEWLINE,'\n',5,39)
+Action : Shift and goto state 104
+
+State  : 104
+Stack  : single_stmt small_stmts NEWLINE . LexToken(PRINT,'print',6,40)
+Action : Reduce rule [simple_stmt -> small_stmts NEWLINE] with [<dict @ 0x10af97c58>,'\n'] and goto state 22
+Result : <dict @ 0x10af97c58> ({'nextlist': []})
+
+State  : 30
+Stack  : single_stmt simple_stmt . LexToken(PRINT,'print',6,40)
+Action : Reduce rule [stmt -> simple_stmt] with [<dict @ 0x10af97c58>] and goto state 20
+Result : <dict @ 0x10af97c58> ({'nextlist': []})
+
+State  : 32
+Stack  : single_stmt stmt . LexToken(PRINT,'print',6,40)
+Action : Reduce rule [single_stmt -> single_stmt stmt] with [<list @ 0x10ae8bb00>,<dict @ 0x10af97c58>] and goto state 4
+Result : <list @ 0x10ae8bea8> ([{'nextlist': []}, {'nextlist': []}, {}, ...)
+
+State  : 2
+Stack  : single_stmt . LexToken(PRINT,'print',6,40)
+Action : Shift and goto state 10
+
+State  : 10
+Stack  : single_stmt PRINT . LexToken(NAME,'c',6,46)
+Action : Shift and goto state 61
+
+State  : 61
+Stack  : single_stmt PRINT NAME . LexToken(NEWLINE,'\n',6,47)
+Action : Reduce rule [atom -> NAME] with ['c'] and goto state 91
+Result : <dict @ 0x10af99050> ({'place': 'var5', 'type': 'NUMBER', 'nam ...)
+
+State  : 37
+Stack  : single_stmt PRINT atom . LexToken(NEWLINE,'\n',6,47)
+Action : Reduce rule [power -> atom] with [<dict @ 0x10af99050>] and goto state 89
+Result : <dict @ 0x10af99050> ({'place': 'var5', 'type': 'NUMBER', 'nam ...)
+
+State  : 16
+Stack  : single_stmt PRINT power . LexToken(NEWLINE,'\n',6,47)
+Action : Reduce rule [factor -> power] with [<dict @ 0x10af99050>] and goto state 86
+Result : <dict @ 0x10af99050> ({'place': 'var5', 'type': 'NUMBER', 'nam ...)
+
+State  : 27
+Stack  : single_stmt PRINT factor . LexToken(NEWLINE,'\n',6,47)
+Action : Reduce rule [term -> factor] with [<dict @ 0x10af99050>] and goto state 82
+Result : <dict @ 0x10af99050> ({'place': 'var5', 'type': 'NUMBER', 'nam ...)
+
+State  : 43
+Stack  : single_stmt PRINT term . LexToken(NEWLINE,'\n',6,47)
+Action : Reduce rule [arith_expr -> term] with [<dict @ 0x10af99050>] and goto state 79
+Result : <dict @ 0x10af99050> ({'place': 'var5', 'type': 'NUMBER', 'nam ...)
+
+State  : 45
+Stack  : single_stmt PRINT arith_expr . LexToken(NEWLINE,'\n',6,47)
+Action : Reduce rule [shift_expr -> arith_expr] with [<dict @ 0x10af99050>] and goto state 76
+Result : <dict @ 0x10af99050> ({'place': 'var5', 'type': 'NUMBER', 'nam ...)
+
+State  : 19
+Stack  : single_stmt PRINT shift_expr . LexToken(NEWLINE,'\n',6,47)
+Action : Reduce rule [and_expr -> shift_expr] with [<dict @ 0x10af99050>] and goto state 74
+Result : <dict @ 0x10af99050> ({'place': 'var5', 'type': 'NUMBER', 'nam ...)
+
+State  : 25
+Stack  : single_stmt PRINT and_expr . LexToken(NEWLINE,'\n',6,47)
+Action : Reduce rule [xor_expr -> and_expr] with [<dict @ 0x10af99050>] and goto state 72
+Result : <dict @ 0x10af99050> ({'place': 'var5', 'type': 'NUMBER', 'nam ...)
+
+State  : 15
+Stack  : single_stmt PRINT xor_expr . LexToken(NEWLINE,'\n',6,47)
+Action : Reduce rule [expr -> xor_expr] with [<dict @ 0x10af99050>] and goto state 70
+Result : <dict @ 0x10af99050> ({'place': 'var5', 'type': 'NUMBER', 'nam ...)
+
+State  : 46
+Stack  : single_stmt PRINT expr . LexToken(NEWLINE,'\n',6,47)
+Action : Reduce rule [comparison -> expr] with [<dict @ 0x10af99050>] and goto state 62
+Result : <dict @ 0x10af99050> ({'place': 'var5', 'type': 'NUMBER', 'nam ...)
+
+State  : 42
+Stack  : single_stmt PRINT comparison . LexToken(NEWLINE,'\n',6,47)
+Action : Reduce rule [not_test -> comparison] with [<dict @ 0x10af99050>] and goto state 61
+Result : <dict @ 0x10af99050> ({'place': 'var5', 'type': 'NUMBER', 'nam ...)
+
+State  : 9
+Stack  : single_stmt PRINT not_test . LexToken(NEWLINE,'\n',6,47)
+Action : Reduce rule [and_test -> not_test] with [<dict @ 0x10af99050>] and goto state 58
+Result : <dict @ 0x10af99050> ({'place': 'var5', 'type': 'NUMBER', 'nam ...)
+
+State  : 35
+Stack  : single_stmt PRINT and_test . LexToken(NEWLINE,'\n',6,47)
+Action : Reduce rule [or_test -> and_test] with [<dict @ 0x10af99050>] and goto state 56
+Result : <dict @ 0x10af99050> ({'place': 'var5', 'type': 'NUMBER', 'nam ...)
+
+State  : 47
+Stack  : single_stmt PRINT or_test . LexToken(NEWLINE,'\n',6,47)
+Action : Reduce rule [test_expr -> or_test] with [<dict @ 0x10af99050>] and goto state 55
+Result : <dict @ 0x10af99050> ({'place': 'var5', 'type': 'NUMBER', 'nam ...)
+
+State  : 23
+Stack  : single_stmt PRINT test_expr . LexToken(NEWLINE,'\n',6,47)
+Action : Reduce rule [test -> test_expr] with [<dict @ 0x10af99050>] and goto state 54
+Result : <dict @ 0x10af99050> ({'name': 'c', 'reference': None, 'place' ...)
+
+State  : 59
+Stack  : single_stmt PRINT test . LexToken(NEWLINE,'\n',6,47)
+Action : Reduce rule [testlist -> test] with [<dict @ 0x10af99050>] and goto state 104
+Result : <list @ 0x10af717a0> ([{'name': 'c', 'reference': None, 'place ...)
+
+State  : 60
+Stack  : single_stmt PRINT testlist . LexToken(NEWLINE,'\n',6,47)
+Action : Reduce rule [print_stmt -> PRINT testlist] with ['print',<list @ 0x10af717a0>] and goto state 30
+Result : <dict @ 0x10af99168> ({})
+
+State  : 21
+Stack  : single_stmt print_stmt . LexToken(NEWLINE,'\n',6,47)
+Action : Reduce rule [Marker -> <empty>] with [] and goto state 46
+Result : <dict @ 0x10af99280> ({'quad': 9})
+
+State  : 70
+Stack  : single_stmt print_stmt Marker . LexToken(NEWLINE,'\n',6,47)
+Action : Reduce rule [small_stmt -> print_stmt Marker] with [{},{'quad': 9}] and goto state 26
+Result : <dict @ 0x10af99168> ({})
+
+State  : 5
+Stack  : single_stmt small_stmt . LexToken(NEWLINE,'\n',6,47)
+Action : Reduce rule [small_stmts -> small_stmt] with [{}] and goto state 23
+Result : <dict @ 0x10af99168> ({})
+
+State  : 52
+Stack  : single_stmt small_stmts . LexToken(NEWLINE,'\n',6,47)
+Action : Shift and goto state 104
+
+State  : 104
+Stack  : single_stmt small_stmts NEWLINE . LexToken(NAME,'b',7,48)
+Action : Reduce rule [simple_stmt -> small_stmts NEWLINE] with [{},'\n'] and goto state 22
+Result : <dict @ 0x10af99168> ({})
+
+State  : 30
+Stack  : single_stmt simple_stmt . LexToken(NAME,'b',7,48)
+Action : Reduce rule [stmt -> simple_stmt] with [{}] and goto state 20
+Result : <dict @ 0x10af99168> ({})
+
+State  : 32
+Stack  : single_stmt stmt . LexToken(NAME,'b',7,48)
+Action : Reduce rule [single_stmt -> single_stmt stmt] with [<list @ 0x10ae8bea8>,{}] and goto state 4
+Result : <list @ 0x10af75c20> ([{'nextlist': []}, {'nextlist': []}, {}, ...)
+
+State  : 2
+Stack  : single_stmt . LexToken(NAME,'b',7,48)
+Action : Shift and goto state 4
+
+State  : 4
+Stack  : single_stmt NAME . LexToken(EQUAL,'=',7,50)
+Action : Reduce rule [atom -> NAME] with ['b'] and goto state 91
+Result : <dict @ 0x10af99398> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 37
+Stack  : single_stmt atom . LexToken(EQUAL,'=',7,50)
+Action : Reduce rule [power -> atom] with [<dict @ 0x10af99398>] and goto state 89
+Result : <dict @ 0x10af99398> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 16
+Stack  : single_stmt power . LexToken(EQUAL,'=',7,50)
+Action : Reduce rule [factor -> power] with [<dict @ 0x10af99398>] and goto state 86
+Result : <dict @ 0x10af99398> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 27
+Stack  : single_stmt factor . LexToken(EQUAL,'=',7,50)
+Action : Reduce rule [term -> factor] with [<dict @ 0x10af99398>] and goto state 82
+Result : <dict @ 0x10af99398> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 43
+Stack  : single_stmt term . LexToken(EQUAL,'=',7,50)
+Action : Reduce rule [arith_expr -> term] with [<dict @ 0x10af99398>] and goto state 79
+Result : <dict @ 0x10af99398> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 45
+Stack  : single_stmt arith_expr . LexToken(EQUAL,'=',7,50)
+Action : Reduce rule [shift_expr -> arith_expr] with [<dict @ 0x10af99398>] and goto state 76
+Result : <dict @ 0x10af99398> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 19
+Stack  : single_stmt shift_expr . LexToken(EQUAL,'=',7,50)
+Action : Reduce rule [and_expr -> shift_expr] with [<dict @ 0x10af99398>] and goto state 74
+Result : <dict @ 0x10af99398> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 25
+Stack  : single_stmt and_expr . LexToken(EQUAL,'=',7,50)
+Action : Reduce rule [xor_expr -> and_expr] with [<dict @ 0x10af99398>] and goto state 72
+Result : <dict @ 0x10af99398> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 15
+Stack  : single_stmt xor_expr . LexToken(EQUAL,'=',7,50)
+Action : Reduce rule [expr -> xor_expr] with [<dict @ 0x10af99398>] and goto state 70
+Result : <dict @ 0x10af99398> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 46
+Stack  : single_stmt expr . LexToken(EQUAL,'=',7,50)
+Action : Reduce rule [comparison -> expr] with [<dict @ 0x10af99398>] and goto state 62
+Result : <dict @ 0x10af99398> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 42
+Stack  : single_stmt comparison . LexToken(EQUAL,'=',7,50)
+Action : Reduce rule [not_test -> comparison] with [<dict @ 0x10af99398>] and goto state 61
+Result : <dict @ 0x10af99398> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 9
+Stack  : single_stmt not_test . LexToken(EQUAL,'=',7,50)
+Action : Reduce rule [and_test -> not_test] with [<dict @ 0x10af99398>] and goto state 58
+Result : <dict @ 0x10af99398> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 35
+Stack  : single_stmt and_test . LexToken(EQUAL,'=',7,50)
+Action : Reduce rule [or_test -> and_test] with [<dict @ 0x10af99398>] and goto state 56
+Result : <dict @ 0x10af99398> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 47
+Stack  : single_stmt or_test . LexToken(EQUAL,'=',7,50)
+Action : Reduce rule [test_expr -> or_test] with [<dict @ 0x10af99398>] and goto state 55
+Result : <dict @ 0x10af99398> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 23
+Stack  : single_stmt test_expr . LexToken(EQUAL,'=',7,50)
+Action : Reduce rule [test -> test_expr] with [<dict @ 0x10af99398>] and goto state 54
+Result : <dict @ 0x10af99398> ({'name': 'b', 'reference': None, 'place' ...)
+
+State  : 22
+Stack  : single_stmt test . LexToken(EQUAL,'=',7,50)
+Action : Shift and goto state 71
+
+State  : 71
+Stack  : single_stmt test EQUAL . LexToken(NAME,'a',7,52)
+Action : Shift and goto state 4
+
+State  : 4
+Stack  : single_stmt test EQUAL NAME . LexToken(STAR,'*',7,54)
+Action : Reduce rule [atom -> NAME] with ['a'] and goto state 91
+Result : <dict @ 0x10af994b0> ({'place': 'var2', 'type': 'NUMBER', 'nam ...)
+
+State  : 37
+Stack  : single_stmt test EQUAL atom . LexToken(STAR,'*',7,54)
+Action : Reduce rule [power -> atom] with [<dict @ 0x10af994b0>] and goto state 89
+Result : <dict @ 0x10af994b0> ({'place': 'var2', 'type': 'NUMBER', 'nam ...)
+
+State  : 16
+Stack  : single_stmt test EQUAL power . LexToken(STAR,'*',7,54)
+Action : Reduce rule [factor -> power] with [<dict @ 0x10af994b0>] and goto state 86
+Result : <dict @ 0x10af994b0> ({'place': 'var2', 'type': 'NUMBER', 'nam ...)
+
+State  : 27
+Stack  : single_stmt test EQUAL factor . LexToken(STAR,'*',7,54)
+Action : Shift and goto state 75
+
+State  : 75
+Stack  : single_stmt test EQUAL factor STAR . LexToken(NAME,'c',7,56)
+Action : Shift and goto state 61
+
+State  : 61
+Stack  : single_stmt test EQUAL factor STAR NAME . LexToken(NEWLINE,'\n',7,57)
+Action : Reduce rule [atom -> NAME] with ['c'] and goto state 91
+Result : <dict @ 0x10af995c8> ({'place': 'var5', 'type': 'NUMBER', 'nam ...)
+
+State  : 37
+Stack  : single_stmt test EQUAL factor STAR atom . LexToken(NEWLINE,'\n',7,57)
+Action : Reduce rule [power -> atom] with [<dict @ 0x10af995c8>] and goto state 89
+Result : <dict @ 0x10af995c8> ({'place': 'var5', 'type': 'NUMBER', 'nam ...)
+
+State  : 16
+Stack  : single_stmt test EQUAL factor STAR power . LexToken(NEWLINE,'\n',7,57)
+Action : Reduce rule [factor -> power] with [<dict @ 0x10af995c8>] and goto state 86
+Result : <dict @ 0x10af995c8> ({'place': 'var5', 'type': 'NUMBER', 'nam ...)
+
+State  : 27
+Stack  : single_stmt test EQUAL factor STAR factor . LexToken(NEWLINE,'\n',7,57)
+Action : Reduce rule [term -> factor] with [<dict @ 0x10af995c8>] and goto state 82
+Result : <dict @ 0x10af995c8> ({'place': 'var5', 'type': 'NUMBER', 'nam ...)
+
+State  : 117
+Stack  : single_stmt test EQUAL factor STAR term . LexToken(NEWLINE,'\n',7,57)
+Action : Reduce rule [term -> factor STAR term] with [<dict @ 0x10af994b0>,'*',<dict @ 0x10af995c8>] and goto state 83
+Result : <dict @ 0x10af996e0> ({'type': 'NUMBER', 'place': 'var6'})
+
+State  : 43
+Stack  : single_stmt test EQUAL term . LexToken(NEWLINE,'\n',7,57)
+Action : Reduce rule [arith_expr -> term] with [<dict @ 0x10af996e0>] and goto state 79
+Result : <dict @ 0x10af996e0> ({'type': 'NUMBER', 'place': 'var6'})
+
+State  : 45
+Stack  : single_stmt test EQUAL arith_expr . LexToken(NEWLINE,'\n',7,57)
+Action : Reduce rule [shift_expr -> arith_expr] with [<dict @ 0x10af996e0>] and goto state 76
+Result : <dict @ 0x10af996e0> ({'type': 'NUMBER', 'place': 'var6'})
+
+State  : 19
+Stack  : single_stmt test EQUAL shift_expr . LexToken(NEWLINE,'\n',7,57)
+Action : Reduce rule [and_expr -> shift_expr] with [<dict @ 0x10af996e0>] and goto state 74
+Result : <dict @ 0x10af996e0> ({'type': 'NUMBER', 'place': 'var6'})
+
+State  : 25
+Stack  : single_stmt test EQUAL and_expr . LexToken(NEWLINE,'\n',7,57)
+Action : Reduce rule [xor_expr -> and_expr] with [<dict @ 0x10af996e0>] and goto state 72
+Result : <dict @ 0x10af996e0> ({'type': 'NUMBER', 'place': 'var6'})
+
+State  : 15
+Stack  : single_stmt test EQUAL xor_expr . LexToken(NEWLINE,'\n',7,57)
+Action : Reduce rule [expr -> xor_expr] with [<dict @ 0x10af996e0>] and goto state 70
+Result : <dict @ 0x10af996e0> ({'type': 'NUMBER', 'place': 'var6'})
+
+State  : 46
+Stack  : single_stmt test EQUAL expr . LexToken(NEWLINE,'\n',7,57)
+Action : Reduce rule [comparison -> expr] with [<dict @ 0x10af996e0>] and goto state 62
+Result : <dict @ 0x10af996e0> ({'type': 'NUMBER', 'place': 'var6'})
+
+State  : 42
+Stack  : single_stmt test EQUAL comparison . LexToken(NEWLINE,'\n',7,57)
+Action : Reduce rule [not_test -> comparison] with [<dict @ 0x10af996e0>] and goto state 61
+Result : <dict @ 0x10af996e0> ({'type': 'NUMBER', 'place': 'var6'})
+
+State  : 9
+Stack  : single_stmt test EQUAL not_test . LexToken(NEWLINE,'\n',7,57)
+Action : Reduce rule [and_test -> not_test] with [<dict @ 0x10af996e0>] and goto state 58
+Result : <dict @ 0x10af996e0> ({'type': 'NUMBER', 'place': 'var6'})
+
+State  : 35
+Stack  : single_stmt test EQUAL and_test . LexToken(NEWLINE,'\n',7,57)
+Action : Reduce rule [or_test -> and_test] with [<dict @ 0x10af996e0>] and goto state 56
+Result : <dict @ 0x10af996e0> ({'type': 'NUMBER', 'place': 'var6'})
+
+State  : 47
+Stack  : single_stmt test EQUAL or_test . LexToken(NEWLINE,'\n',7,57)
+Action : Reduce rule [test_expr -> or_test] with [<dict @ 0x10af996e0>] and goto state 55
+Result : <dict @ 0x10af996e0> ({'type': 'NUMBER', 'place': 'var6'})
+
+State  : 23
+Stack  : single_stmt test EQUAL test_expr . LexToken(NEWLINE,'\n',7,57)
+Action : Reduce rule [test -> test_expr] with [<dict @ 0x10af996e0>] and goto state 54
+Result : <dict @ 0x10af996e0> ({'type': 'NUMBER', 'place': 'var6', 'ref ...)
+
+State  : 114
+Stack  : single_stmt test EQUAL test . LexToken(NEWLINE,'\n',7,57)
+Action : Reduce rule [expr_stmt -> test EQUAL test] with [<dict @ 0x10af99398>,'=',<dict @ 0x10af996e0>] and goto state 27
+Result : <dict @ 0x10af997f8> ({'nextlist': []})
+
+State  : 40
+Stack  : single_stmt expr_stmt . LexToken(NEWLINE,'\n',7,57)
+Action : Reduce rule [Marker -> <empty>] with [] and goto state 46
+Result : <dict @ 0x10af99910> ({'quad': 11})
+
+State  : 89
+Stack  : single_stmt expr_stmt Marker . LexToken(NEWLINE,'\n',7,57)
+Action : Reduce rule [small_stmt -> expr_stmt Marker] with [<dict @ 0x10af997f8>,{'quad': 11}] and goto state 25
+Result : <dict @ 0x10af997f8> ({'nextlist': []})
+
+State  : 5
+Stack  : single_stmt small_stmt . LexToken(NEWLINE,'\n',7,57)
+Action : Reduce rule [small_stmts -> small_stmt] with [<dict @ 0x10af997f8>] and goto state 23
+Result : <dict @ 0x10af997f8> ({'nextlist': []})
+
+State  : 52
+Stack  : single_stmt small_stmts . LexToken(NEWLINE,'\n',7,57)
+Action : Shift and goto state 104
+
+State  : 104
+Stack  : single_stmt small_stmts NEWLINE . LexToken(PRINT,'print',8,58)
+Action : Reduce rule [simple_stmt -> small_stmts NEWLINE] with [<dict @ 0x10af997f8>,'\n'] and goto state 22
+Result : <dict @ 0x10af997f8> ({'nextlist': []})
+
+State  : 30
+Stack  : single_stmt simple_stmt . LexToken(PRINT,'print',8,58)
+Action : Reduce rule [stmt -> simple_stmt] with [<dict @ 0x10af997f8>] and goto state 20
+Result : <dict @ 0x10af997f8> ({'nextlist': []})
+
+State  : 32
+Stack  : single_stmt stmt . LexToken(PRINT,'print',8,58)
+Action : Reduce rule [single_stmt -> single_stmt stmt] with [<list @ 0x10af75c20>,<dict @ 0x10af997f8>] and goto state 4
+Result : <list @ 0x10af734d0> ([{'nextlist': []}, {'nextlist': []}, {}, ...)
+
+State  : 2
+Stack  : single_stmt . LexToken(PRINT,'print',8,58)
+Action : Shift and goto state 10
+
+State  : 10
+Stack  : single_stmt PRINT . LexToken(NAME,'b',8,64)
+Action : Shift and goto state 61
+
+State  : 61
+Stack  : single_stmt PRINT NAME . LexToken(NEWLINE,'\n',8,65)
+Action : Reduce rule [atom -> NAME] with ['b'] and goto state 91
+Result : <dict @ 0x10af99a28> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 37
+Stack  : single_stmt PRINT atom . LexToken(NEWLINE,'\n',8,65)
+Action : Reduce rule [power -> atom] with [<dict @ 0x10af99a28>] and goto state 89
+Result : <dict @ 0x10af99a28> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 16
+Stack  : single_stmt PRINT power . LexToken(NEWLINE,'\n',8,65)
+Action : Reduce rule [factor -> power] with [<dict @ 0x10af99a28>] and goto state 86
+Result : <dict @ 0x10af99a28> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 27
+Stack  : single_stmt PRINT factor . LexToken(NEWLINE,'\n',8,65)
+Action : Reduce rule [term -> factor] with [<dict @ 0x10af99a28>] and goto state 82
+Result : <dict @ 0x10af99a28> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 43
+Stack  : single_stmt PRINT term . LexToken(NEWLINE,'\n',8,65)
+Action : Reduce rule [arith_expr -> term] with [<dict @ 0x10af99a28>] and goto state 79
+Result : <dict @ 0x10af99a28> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 45
+Stack  : single_stmt PRINT arith_expr . LexToken(NEWLINE,'\n',8,65)
+Action : Reduce rule [shift_expr -> arith_expr] with [<dict @ 0x10af99a28>] and goto state 76
+Result : <dict @ 0x10af99a28> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 19
+Stack  : single_stmt PRINT shift_expr . LexToken(NEWLINE,'\n',8,65)
+Action : Reduce rule [and_expr -> shift_expr] with [<dict @ 0x10af99a28>] and goto state 74
+Result : <dict @ 0x10af99a28> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 25
+Stack  : single_stmt PRINT and_expr . LexToken(NEWLINE,'\n',8,65)
+Action : Reduce rule [xor_expr -> and_expr] with [<dict @ 0x10af99a28>] and goto state 72
+Result : <dict @ 0x10af99a28> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 15
+Stack  : single_stmt PRINT xor_expr . LexToken(NEWLINE,'\n',8,65)
+Action : Reduce rule [expr -> xor_expr] with [<dict @ 0x10af99a28>] and goto state 70
+Result : <dict @ 0x10af99a28> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 46
+Stack  : single_stmt PRINT expr . LexToken(NEWLINE,'\n',8,65)
+Action : Reduce rule [comparison -> expr] with [<dict @ 0x10af99a28>] and goto state 62
+Result : <dict @ 0x10af99a28> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 42
+Stack  : single_stmt PRINT comparison . LexToken(NEWLINE,'\n',8,65)
+Action : Reduce rule [not_test -> comparison] with [<dict @ 0x10af99a28>] and goto state 61
+Result : <dict @ 0x10af99a28> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 9
+Stack  : single_stmt PRINT not_test . LexToken(NEWLINE,'\n',8,65)
+Action : Reduce rule [and_test -> not_test] with [<dict @ 0x10af99a28>] and goto state 58
+Result : <dict @ 0x10af99a28> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 35
+Stack  : single_stmt PRINT and_test . LexToken(NEWLINE,'\n',8,65)
+Action : Reduce rule [or_test -> and_test] with [<dict @ 0x10af99a28>] and goto state 56
+Result : <dict @ 0x10af99a28> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 47
+Stack  : single_stmt PRINT or_test . LexToken(NEWLINE,'\n',8,65)
+Action : Reduce rule [test_expr -> or_test] with [<dict @ 0x10af99a28>] and goto state 55
+Result : <dict @ 0x10af99a28> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 23
+Stack  : single_stmt PRINT test_expr . LexToken(NEWLINE,'\n',8,65)
+Action : Reduce rule [test -> test_expr] with [<dict @ 0x10af99a28>] and goto state 54
+Result : <dict @ 0x10af99a28> ({'name': 'b', 'reference': None, 'place' ...)
+
+State  : 59
+Stack  : single_stmt PRINT test . LexToken(NEWLINE,'\n',8,65)
+Action : Reduce rule [testlist -> test] with [<dict @ 0x10af99a28>] and goto state 104
+Result : <list @ 0x10ae8bea8> ([{'name': 'b', 'reference': None, 'place ...)
+
+State  : 60
+Stack  : single_stmt PRINT testlist . LexToken(NEWLINE,'\n',8,65)
+Action : Reduce rule [print_stmt -> PRINT testlist] with ['print',<list @ 0x10ae8bea8>] and goto state 30
+Result : <dict @ 0x10af99b40> ({})
+
+State  : 21
+Stack  : single_stmt print_stmt . LexToken(NEWLINE,'\n',8,65)
+Action : Reduce rule [Marker -> <empty>] with [] and goto state 46
+Result : <dict @ 0x10af99c58> ({'quad': 13})
+
+State  : 70
+Stack  : single_stmt print_stmt Marker . LexToken(NEWLINE,'\n',8,65)
+Action : Reduce rule [small_stmt -> print_stmt Marker] with [{},{'quad': 13}] and goto state 26
+Result : <dict @ 0x10af99b40> ({})
+
+State  : 5
+Stack  : single_stmt small_stmt . LexToken(NEWLINE,'\n',8,65)
+Action : Reduce rule [small_stmts -> small_stmt] with [{}] and goto state 23
+Result : <dict @ 0x10af99b40> ({})
+
+State  : 52
+Stack  : single_stmt small_stmts . LexToken(NEWLINE,'\n',8,65)
+Action : Shift and goto state 104
+
+State  : 104
+Stack  : single_stmt small_stmts NEWLINE . LexToken(NAME,'b',9,66)
+Action : Reduce rule [simple_stmt -> small_stmts NEWLINE] with [{},'\n'] and goto state 22
+Result : <dict @ 0x10af99b40> ({})
+
+State  : 30
+Stack  : single_stmt simple_stmt . LexToken(NAME,'b',9,66)
+Action : Reduce rule [stmt -> simple_stmt] with [{}] and goto state 20
+Result : <dict @ 0x10af99b40> ({})
+
+State  : 32
+Stack  : single_stmt stmt . LexToken(NAME,'b',9,66)
+Action : Reduce rule [single_stmt -> single_stmt stmt] with [<list @ 0x10af734d0>,{}] and goto state 4
+Result : <list @ 0x10af753b0> ([{'nextlist': []}, {'nextlist': []}, {}, ...)
+
+State  : 2
+Stack  : single_stmt . LexToken(NAME,'b',9,66)
+Action : Shift and goto state 4
+
+State  : 4
+Stack  : single_stmt NAME . LexToken(EQUAL,'=',9,68)
+Action : Reduce rule [atom -> NAME] with ['b'] and goto state 91
+Result : <dict @ 0x10af99d70> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 37
+Stack  : single_stmt atom . LexToken(EQUAL,'=',9,68)
+Action : Reduce rule [power -> atom] with [<dict @ 0x10af99d70>] and goto state 89
+Result : <dict @ 0x10af99d70> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 16
+Stack  : single_stmt power . LexToken(EQUAL,'=',9,68)
+Action : Reduce rule [factor -> power] with [<dict @ 0x10af99d70>] and goto state 86
+Result : <dict @ 0x10af99d70> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 27
+Stack  : single_stmt factor . LexToken(EQUAL,'=',9,68)
+Action : Reduce rule [term -> factor] with [<dict @ 0x10af99d70>] and goto state 82
+Result : <dict @ 0x10af99d70> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 43
+Stack  : single_stmt term . LexToken(EQUAL,'=',9,68)
+Action : Reduce rule [arith_expr -> term] with [<dict @ 0x10af99d70>] and goto state 79
+Result : <dict @ 0x10af99d70> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 45
+Stack  : single_stmt arith_expr . LexToken(EQUAL,'=',9,68)
+Action : Reduce rule [shift_expr -> arith_expr] with [<dict @ 0x10af99d70>] and goto state 76
+Result : <dict @ 0x10af99d70> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 19
+Stack  : single_stmt shift_expr . LexToken(EQUAL,'=',9,68)
+Action : Reduce rule [and_expr -> shift_expr] with [<dict @ 0x10af99d70>] and goto state 74
+Result : <dict @ 0x10af99d70> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 25
+Stack  : single_stmt and_expr . LexToken(EQUAL,'=',9,68)
+Action : Reduce rule [xor_expr -> and_expr] with [<dict @ 0x10af99d70>] and goto state 72
+Result : <dict @ 0x10af99d70> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 15
+Stack  : single_stmt xor_expr . LexToken(EQUAL,'=',9,68)
+Action : Reduce rule [expr -> xor_expr] with [<dict @ 0x10af99d70>] and goto state 70
+Result : <dict @ 0x10af99d70> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 46
+Stack  : single_stmt expr . LexToken(EQUAL,'=',9,68)
+Action : Reduce rule [comparison -> expr] with [<dict @ 0x10af99d70>] and goto state 62
+Result : <dict @ 0x10af99d70> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 42
+Stack  : single_stmt comparison . LexToken(EQUAL,'=',9,68)
+Action : Reduce rule [not_test -> comparison] with [<dict @ 0x10af99d70>] and goto state 61
+Result : <dict @ 0x10af99d70> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 9
+Stack  : single_stmt not_test . LexToken(EQUAL,'=',9,68)
+Action : Reduce rule [and_test -> not_test] with [<dict @ 0x10af99d70>] and goto state 58
+Result : <dict @ 0x10af99d70> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 35
+Stack  : single_stmt and_test . LexToken(EQUAL,'=',9,68)
+Action : Reduce rule [or_test -> and_test] with [<dict @ 0x10af99d70>] and goto state 56
+Result : <dict @ 0x10af99d70> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 47
+Stack  : single_stmt or_test . LexToken(EQUAL,'=',9,68)
+Action : Reduce rule [test_expr -> or_test] with [<dict @ 0x10af99d70>] and goto state 55
+Result : <dict @ 0x10af99d70> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 23
+Stack  : single_stmt test_expr . LexToken(EQUAL,'=',9,68)
+Action : Reduce rule [test -> test_expr] with [<dict @ 0x10af99d70>] and goto state 54
+Result : <dict @ 0x10af99d70> ({'name': 'b', 'reference': None, 'place' ...)
+
+State  : 22
+Stack  : single_stmt test . LexToken(EQUAL,'=',9,68)
+Action : Shift and goto state 71
+
+State  : 71
+Stack  : single_stmt test EQUAL . LexToken(NAME,'b',9,70)
+Action : Shift and goto state 4
+
+State  : 4
+Stack  : single_stmt test EQUAL NAME . LexToken(STAR,'*',9,71)
+Action : Reduce rule [atom -> NAME] with ['b'] and goto state 91
+Result : <dict @ 0x10af99e88> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 37
+Stack  : single_stmt test EQUAL atom . LexToken(STAR,'*',9,71)
+Action : Reduce rule [power -> atom] with [<dict @ 0x10af99e88>] and goto state 89
+Result : <dict @ 0x10af99e88> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 16
+Stack  : single_stmt test EQUAL power . LexToken(STAR,'*',9,71)
+Action : Reduce rule [factor -> power] with [<dict @ 0x10af99e88>] and goto state 86
+Result : <dict @ 0x10af99e88> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 27
+Stack  : single_stmt test EQUAL factor . LexToken(STAR,'*',9,71)
+Action : Shift and goto state 75
+
+State  : 75
+Stack  : single_stmt test EQUAL factor STAR . LexToken(NAME,'b',9,72)
+Action : Shift and goto state 61
+
+State  : 61
+Stack  : single_stmt test EQUAL factor STAR NAME . LexToken(NEWLINE,'\n',9,73)
+Action : Reduce rule [atom -> NAME] with ['b'] and goto state 91
+Result : <dict @ 0x10af9a050> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 37
+Stack  : single_stmt test EQUAL factor STAR atom . LexToken(NEWLINE,'\n',9,73)
+Action : Reduce rule [power -> atom] with [<dict @ 0x10af9a050>] and goto state 89
+Result : <dict @ 0x10af9a050> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 16
+Stack  : single_stmt test EQUAL factor STAR power . LexToken(NEWLINE,'\n',9,73)
+Action : Reduce rule [factor -> power] with [<dict @ 0x10af9a050>] and goto state 86
+Result : <dict @ 0x10af9a050> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 27
+Stack  : single_stmt test EQUAL factor STAR factor . LexToken(NEWLINE,'\n',9,73)
+Action : Reduce rule [term -> factor] with [<dict @ 0x10af9a050>] and goto state 82
+Result : <dict @ 0x10af9a050> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 117
+Stack  : single_stmt test EQUAL factor STAR term . LexToken(NEWLINE,'\n',9,73)
+Action : Reduce rule [term -> factor STAR term] with [<dict @ 0x10af99e88>,'*',<dict @ 0x10af9a050>] and goto state 83
+Result : <dict @ 0x10af9a168> ({'type': 'NUMBER', 'place': 'var7'})
+
+State  : 43
+Stack  : single_stmt test EQUAL term . LexToken(NEWLINE,'\n',9,73)
+Action : Reduce rule [arith_expr -> term] with [<dict @ 0x10af9a168>] and goto state 79
+Result : <dict @ 0x10af9a168> ({'type': 'NUMBER', 'place': 'var7'})
+
+State  : 45
+Stack  : single_stmt test EQUAL arith_expr . LexToken(NEWLINE,'\n',9,73)
+Action : Reduce rule [shift_expr -> arith_expr] with [<dict @ 0x10af9a168>] and goto state 76
+Result : <dict @ 0x10af9a168> ({'type': 'NUMBER', 'place': 'var7'})
+
+State  : 19
+Stack  : single_stmt test EQUAL shift_expr . LexToken(NEWLINE,'\n',9,73)
+Action : Reduce rule [and_expr -> shift_expr] with [<dict @ 0x10af9a168>] and goto state 74
+Result : <dict @ 0x10af9a168> ({'type': 'NUMBER', 'place': 'var7'})
+
+State  : 25
+Stack  : single_stmt test EQUAL and_expr . LexToken(NEWLINE,'\n',9,73)
+Action : Reduce rule [xor_expr -> and_expr] with [<dict @ 0x10af9a168>] and goto state 72
+Result : <dict @ 0x10af9a168> ({'type': 'NUMBER', 'place': 'var7'})
+
+State  : 15
+Stack  : single_stmt test EQUAL xor_expr . LexToken(NEWLINE,'\n',9,73)
+Action : Reduce rule [expr -> xor_expr] with [<dict @ 0x10af9a168>] and goto state 70
+Result : <dict @ 0x10af9a168> ({'type': 'NUMBER', 'place': 'var7'})
+
+State  : 46
+Stack  : single_stmt test EQUAL expr . LexToken(NEWLINE,'\n',9,73)
+Action : Reduce rule [comparison -> expr] with [<dict @ 0x10af9a168>] and goto state 62
+Result : <dict @ 0x10af9a168> ({'type': 'NUMBER', 'place': 'var7'})
+
+State  : 42
+Stack  : single_stmt test EQUAL comparison . LexToken(NEWLINE,'\n',9,73)
+Action : Reduce rule [not_test -> comparison] with [<dict @ 0x10af9a168>] and goto state 61
+Result : <dict @ 0x10af9a168> ({'type': 'NUMBER', 'place': 'var7'})
+
+State  : 9
+Stack  : single_stmt test EQUAL not_test . LexToken(NEWLINE,'\n',9,73)
+Action : Reduce rule [and_test -> not_test] with [<dict @ 0x10af9a168>] and goto state 58
+Result : <dict @ 0x10af9a168> ({'type': 'NUMBER', 'place': 'var7'})
+
+State  : 35
+Stack  : single_stmt test EQUAL and_test . LexToken(NEWLINE,'\n',9,73)
+Action : Reduce rule [or_test -> and_test] with [<dict @ 0x10af9a168>] and goto state 56
+Result : <dict @ 0x10af9a168> ({'type': 'NUMBER', 'place': 'var7'})
+
+State  : 47
+Stack  : single_stmt test EQUAL or_test . LexToken(NEWLINE,'\n',9,73)
+Action : Reduce rule [test_expr -> or_test] with [<dict @ 0x10af9a168>] and goto state 55
+Result : <dict @ 0x10af9a168> ({'type': 'NUMBER', 'place': 'var7'})
+
+State  : 23
+Stack  : single_stmt test EQUAL test_expr . LexToken(NEWLINE,'\n',9,73)
+Action : Reduce rule [test -> test_expr] with [<dict @ 0x10af9a168>] and goto state 54
+Result : <dict @ 0x10af9a168> ({'type': 'NUMBER', 'place': 'var7', 'ref ...)
+
+State  : 114
+Stack  : single_stmt test EQUAL test . LexToken(NEWLINE,'\n',9,73)
+Action : Reduce rule [expr_stmt -> test EQUAL test] with [<dict @ 0x10af99d70>,'=',<dict @ 0x10af9a168>] and goto state 27
+Result : <dict @ 0x10af9a280> ({'nextlist': []})
+
+State  : 40
+Stack  : single_stmt expr_stmt . LexToken(NEWLINE,'\n',9,73)
+Action : Reduce rule [Marker -> <empty>] with [] and goto state 46
+Result : <dict @ 0x10af9a398> ({'quad': 15})
+
+State  : 89
+Stack  : single_stmt expr_stmt Marker . LexToken(NEWLINE,'\n',9,73)
+Action : Reduce rule [small_stmt -> expr_stmt Marker] with [<dict @ 0x10af9a280>,{'quad': 15}] and goto state 25
+Result : <dict @ 0x10af9a280> ({'nextlist': []})
+
+State  : 5
+Stack  : single_stmt small_stmt . LexToken(NEWLINE,'\n',9,73)
+Action : Reduce rule [small_stmts -> small_stmt] with [<dict @ 0x10af9a280>] and goto state 23
+Result : <dict @ 0x10af9a280> ({'nextlist': []})
+
+State  : 52
+Stack  : single_stmt small_stmts . LexToken(NEWLINE,'\n',9,73)
+Action : Shift and goto state 104
+
+State  : 104
+Stack  : single_stmt small_stmts NEWLINE . LexToken(PRINT,'print',10,74)
+Action : Reduce rule [simple_stmt -> small_stmts NEWLINE] with [<dict @ 0x10af9a280>,'\n'] and goto state 22
+Result : <dict @ 0x10af9a280> ({'nextlist': []})
+
+State  : 30
+Stack  : single_stmt simple_stmt . LexToken(PRINT,'print',10,74)
+Action : Reduce rule [stmt -> simple_stmt] with [<dict @ 0x10af9a280>] and goto state 20
+Result : <dict @ 0x10af9a280> ({'nextlist': []})
+
+State  : 32
+Stack  : single_stmt stmt . LexToken(PRINT,'print',10,74)
+Action : Reduce rule [single_stmt -> single_stmt stmt] with [<list @ 0x10af753b0>,<dict @ 0x10af9a280>] and goto state 4
+Result : <list @ 0x10af757a0> ([{'nextlist': []}, {'nextlist': []}, {}, ...)
+
+State  : 2
+Stack  : single_stmt . LexToken(PRINT,'print',10,74)
+Action : Shift and goto state 10
+
+State  : 10
+Stack  : single_stmt PRINT . LexToken(NAME,'b',10,80)
+Action : Shift and goto state 61
+
+State  : 61
+Stack  : single_stmt PRINT NAME . LexToken(NEWLINE,'\n',10,81)
+Action : Reduce rule [atom -> NAME] with ['b'] and goto state 91
+Result : <dict @ 0x10af9a4b0> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 37
+Stack  : single_stmt PRINT atom . LexToken(NEWLINE,'\n',10,81)
+Action : Reduce rule [power -> atom] with [<dict @ 0x10af9a4b0>] and goto state 89
+Result : <dict @ 0x10af9a4b0> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 16
+Stack  : single_stmt PRINT power . LexToken(NEWLINE,'\n',10,81)
+Action : Reduce rule [factor -> power] with [<dict @ 0x10af9a4b0>] and goto state 86
+Result : <dict @ 0x10af9a4b0> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 27
+Stack  : single_stmt PRINT factor . LexToken(NEWLINE,'\n',10,81)
+Action : Reduce rule [term -> factor] with [<dict @ 0x10af9a4b0>] and goto state 82
+Result : <dict @ 0x10af9a4b0> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 43
+Stack  : single_stmt PRINT term . LexToken(NEWLINE,'\n',10,81)
+Action : Reduce rule [arith_expr -> term] with [<dict @ 0x10af9a4b0>] and goto state 79
+Result : <dict @ 0x10af9a4b0> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 45
+Stack  : single_stmt PRINT arith_expr . LexToken(NEWLINE,'\n',10,81)
+Action : Reduce rule [shift_expr -> arith_expr] with [<dict @ 0x10af9a4b0>] and goto state 76
+Result : <dict @ 0x10af9a4b0> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 19
+Stack  : single_stmt PRINT shift_expr . LexToken(NEWLINE,'\n',10,81)
+Action : Reduce rule [and_expr -> shift_expr] with [<dict @ 0x10af9a4b0>] and goto state 74
+Result : <dict @ 0x10af9a4b0> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 25
+Stack  : single_stmt PRINT and_expr . LexToken(NEWLINE,'\n',10,81)
+Action : Reduce rule [xor_expr -> and_expr] with [<dict @ 0x10af9a4b0>] and goto state 72
+Result : <dict @ 0x10af9a4b0> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 15
+Stack  : single_stmt PRINT xor_expr . LexToken(NEWLINE,'\n',10,81)
+Action : Reduce rule [expr -> xor_expr] with [<dict @ 0x10af9a4b0>] and goto state 70
+Result : <dict @ 0x10af9a4b0> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 46
+Stack  : single_stmt PRINT expr . LexToken(NEWLINE,'\n',10,81)
+Action : Reduce rule [comparison -> expr] with [<dict @ 0x10af9a4b0>] and goto state 62
+Result : <dict @ 0x10af9a4b0> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 42
+Stack  : single_stmt PRINT comparison . LexToken(NEWLINE,'\n',10,81)
+Action : Reduce rule [not_test -> comparison] with [<dict @ 0x10af9a4b0>] and goto state 61
+Result : <dict @ 0x10af9a4b0> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 9
+Stack  : single_stmt PRINT not_test . LexToken(NEWLINE,'\n',10,81)
+Action : Reduce rule [and_test -> not_test] with [<dict @ 0x10af9a4b0>] and goto state 58
+Result : <dict @ 0x10af9a4b0> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 35
+Stack  : single_stmt PRINT and_test . LexToken(NEWLINE,'\n',10,81)
+Action : Reduce rule [or_test -> and_test] with [<dict @ 0x10af9a4b0>] and goto state 56
+Result : <dict @ 0x10af9a4b0> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 47
+Stack  : single_stmt PRINT or_test . LexToken(NEWLINE,'\n',10,81)
+Action : Reduce rule [test_expr -> or_test] with [<dict @ 0x10af9a4b0>] and goto state 55
+Result : <dict @ 0x10af9a4b0> ({'place': 'var4', 'type': 'NUMBER', 'nam ...)
+
+State  : 23
+Stack  : single_stmt PRINT test_expr . LexToken(NEWLINE,'\n',10,81)
+Action : Reduce rule [test -> test_expr] with [<dict @ 0x10af9a4b0>] and goto state 54
+Result : <dict @ 0x10af9a4b0> ({'name': 'b', 'reference': None, 'place' ...)
+
+State  : 59
+Stack  : single_stmt PRINT test . LexToken(NEWLINE,'\n',10,81)
+Action : Reduce rule [testlist -> test] with [<dict @ 0x10af9a4b0>] and goto state 104
+Result : <list @ 0x10af734d0> ([{'name': 'b', 'reference': None, 'place ...)
+
+State  : 60
+Stack  : single_stmt PRINT testlist . LexToken(NEWLINE,'\n',10,81)
+Action : Reduce rule [print_stmt -> PRINT testlist] with ['print',<list @ 0x10af734d0>] and goto state 30
+Result : <dict @ 0x10af9a5c8> ({})
+
+State  : 21
+Stack  : single_stmt print_stmt . LexToken(NEWLINE,'\n',10,81)
+Action : Reduce rule [Marker -> <empty>] with [] and goto state 46
+Result : <dict @ 0x10af9a6e0> ({'quad': 17})
+
+State  : 70
+Stack  : single_stmt print_stmt Marker . LexToken(NEWLINE,'\n',10,81)
+Action : Reduce rule [small_stmt -> print_stmt Marker] with [{},{'quad': 17}] and goto state 26
+Result : <dict @ 0x10af9a5c8> ({})
+
+State  : 5
+Stack  : single_stmt small_stmt . LexToken(NEWLINE,'\n',10,81)
+Action : Reduce rule [small_stmts -> small_stmt] with [{}] and goto state 23
+Result : <dict @ 0x10af9a5c8> ({})
+
+State  : 52
+Stack  : single_stmt small_stmts . LexToken(NEWLINE,'\n',10,81)
+Action : Shift and goto state 104
+
+State  : 104
+Stack  : single_stmt small_stmts NEWLINE . LexToken(ENDMARKER,None,10,-100)
+Action : Reduce rule [simple_stmt -> small_stmts NEWLINE] with [{},'\n'] and goto state 22
+Result : <dict @ 0x10af9a5c8> ({})
+
+State  : 30
+Stack  : single_stmt simple_stmt . LexToken(ENDMARKER,None,10,-100)
+Action : Reduce rule [stmt -> simple_stmt] with [{}] and goto state 20
+Result : <dict @ 0x10af9a5c8> ({})
+
+State  : 32
+Stack  : single_stmt stmt . LexToken(ENDMARKER,None,10,-100)
+Action : Reduce rule [single_stmt -> single_stmt stmt] with [<list @ 0x10af757a0>,{}] and goto state 4
+Result : <list @ 0x10af141b8> ([{'nextlist': []}, {'nextlist': []}, {}, ...)
+
+State  : 2
+Stack  : single_stmt . LexToken(ENDMARKER,None,10,-100)
+Action : Shift and goto state 3
+
+State  : 3
+Stack  : single_stmt ENDMARKER . $end
+Action : Reduce rule [file_input -> single_stmt ENDMARKER] with [<list @ 0x10af141b8>,None] and goto state 1
+Result : <list @ 0x10af141b8> ([{'nextlist': []}, {'nextlist': []}, {}, ...)
+
+State  : 1
+Stack  : file_input . $end
+Done   : Returning <list @ 0x10af141b8> ([{'nextlist': []}, {'nextlist': []}, {}, ...)
+PLY: PARSE DEBUG END
